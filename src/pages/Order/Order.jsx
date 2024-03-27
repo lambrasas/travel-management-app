@@ -26,7 +26,6 @@ const Order = () => {
         console.error("Error fetching orders and hotels:", error);
       }
     };
-
     fetchOrderAndHotels();
   }, [id]);
 
