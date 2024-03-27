@@ -19,7 +19,7 @@ const Order = () => {
           fetchOrders(),
           fetchHotels(),
         ]);
-        const foundOrder = ordersResponse.find((o) => o.id === id);
+        const foundOrder = ordersResponse.find((o) => o.id == id);
         setOrder(foundOrder);
         setHotels(hotelsResponse);
       } catch (error) {
@@ -37,7 +37,7 @@ const Order = () => {
     );
   }
 
-  const hotel = hotels.find((hotel) => hotel.id === order.hotelId);
+  const hotel = hotels.find((hotel) => hotel.id == order.hotelId);
   const orderWithHotelInfo = { ...order, hotel };
 
   return (
